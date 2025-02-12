@@ -26,9 +26,11 @@ user_pref("gfx.canvas.accelerated.cache-size", 512);
 user_pref("gfx.content.skia-font-cache-size", 20);
 
 /** DISK & memory cache ***/
-user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.enable", true);
+user_pref("browser.cache.disk.capacity", 4194304); 
+user_pref("browser.cache.disk.smart_size.enabled", false);
 user_pref("browser.cache.memory.enable", true);
-user_pref("browser.cache.memory.capacity ", 0);
+user_pref("browser.cache.memory.capacity ", 2097152);
 
 /** MEDIA CACHE ***/
 user_pref("media.memory_cache_max_size", 65536);
@@ -44,7 +46,7 @@ user_pref("network.http.max-persistent-connections-per-server", 10);
 user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5);
 user_pref("network.http.pacing.requests.enabled", false);
 user_pref("network.dnsCacheExpiration", 3600);
-user_pref("network.ssl_tokens_cache_capacity", 10240);
+user_pref("network.ssl_tokens_cache_capacity", 32768);
 
 /** SPECULATIVE LOADING ***/
 user_pref("network.dns.disablePrefetch", true);
@@ -265,4 +267,8 @@ user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.enabled", true);
 user_pref("layout.css.backdrop-filter.enabled", true);
 user_pref("svg.context-properties.content.enabled", true);
+user_pref("fission.autostart", false);
+user_pref("privacy.partition.network_state", false);
+user_pref("dom.ipc.processCount", 1);
+user_pref("dom.ipc.processCount.webIsolated", 1);
 
